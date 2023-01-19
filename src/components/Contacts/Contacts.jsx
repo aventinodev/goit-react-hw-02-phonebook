@@ -1,23 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ContactItems from 'components/ContactItem/ContactItem';
+import ContactItem from 'components/ContactItem/ContactItem';
 import { List } from './Contacts.styled';
+
 export const Contacts = ({ contacts, onChange }) => {
   return (
     <List>
       {contacts.map(({ id, name, number }) => (
-        <ContactItems
+        <ContactItem
           key={id}
+          id={id}
           name={name}
           number={number}
           onChange={onChange}
-        ></ContactItems>
+        ></ContactItem>
       ))}
     </List>
   );
 };
 
-Contacts.propTyps = {
+Contacts.propTypes = {
   onChange: PropTypes.func.isRequired,
   contacts: PropTypes.arrayOf(
     PropTypes.shape({
