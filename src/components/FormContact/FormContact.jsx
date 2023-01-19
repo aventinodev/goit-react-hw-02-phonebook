@@ -58,7 +58,7 @@ class FormContact extends React.Component {
     );
   }
 }
-FormContact.propTyps = {
+FormContact.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
 export default FormContact;
