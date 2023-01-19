@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Item, Button } from './ContactItem.styled';
 
-const ContactItems = ({ id, name, number, onChange }) => {
+const ContactItem = ({ id, name, number, onChange }) => {
   return (
-    <Item key={id}>
+    <Item>
       <p>
         {name}: {number}
       </p>
@@ -15,11 +15,11 @@ const ContactItems = ({ id, name, number, onChange }) => {
   );
 };
 
-ContactItems.propTyps = {
+ContactItem.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
-export default ContactItems;
+export default ContactItem;
