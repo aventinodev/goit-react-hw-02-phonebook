@@ -10,8 +10,8 @@ const Filter = ({ filter = '', onChange }) => {
   );
 };
 
-Filter.propTyps = {
-  filter: PropTypes.string,
+Filter.propTypes = {
+  filter: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
